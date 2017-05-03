@@ -1,4 +1,4 @@
-package br.cefet.commands;
+package br.cefet.aps.cfs.model;
 
 public class Client {
 	private Long id;
@@ -20,6 +20,11 @@ public class Client {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return this.getId() + " " + this.getName();
 	}
 
 }
