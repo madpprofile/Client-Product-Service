@@ -1,6 +1,6 @@
 package br.cefet.aps.cfs.model;
 
-public class Product {
+public abstract class Product {
 	private Long id;
 	private String name;
 	private Long quantity;
@@ -34,4 +34,6 @@ public class Product {
 	public String toString() {
 		return getId() + " " + getName() + " " + getQuantity();
 	}
+	
+	abstract float getPrice();
 }

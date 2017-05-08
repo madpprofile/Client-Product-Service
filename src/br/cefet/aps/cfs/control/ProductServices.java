@@ -31,7 +31,7 @@ abstract class ProductServices {
 				.map(id -> id.getValue()).collect(Collectors.toList());
 		return productsList;
 	}
-	
-	abstract Product newProduct(Long id, String name, Long quantity);
 
+	abstract Product newProduct(Long id, String name, Long quantity);
+	
 }

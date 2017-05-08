@@ -13,7 +13,9 @@ public class DeleteClientCommand implements Command{
 			return;
 		}			
 		try{
-			ControlFacade.deleteClient(Long.parseLong(parameters[1]));
+			ControlFacade cf = ControlFacade.getInstance();
+			Long id = Long.parseLong(parameters[1]);
+			cf.deleteClient(id);
 		} catch(NumberFormatException e){
 			System.out.println("Invalid id");
 		}

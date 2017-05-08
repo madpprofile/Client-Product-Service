@@ -13,7 +13,8 @@ public class DeleteProductCommand implements Command {
 			return;
 		}			
 		try{
-			ControlFacade.deleteProduct(Long.parseLong(parameters[1]));
+			ControlFacade cf = ControlFacade.getInstance();
+			cf.deleteProduct(Long.parseLong(parameters[1]));
 		} catch(NumberFormatException e){
 			System.out.println("Invalid id");
 		}

@@ -13,7 +13,8 @@ public class ListClientCommand implements Command{
 		if(parameters.length != 1){
 			System.out.println("Command listClients has no parameters");
 		}
-		List<Client> clients = ControlFacade.listClients();
+		ControlFacade cf = ControlFacade.getInstance();
+		List<Client> clients = cf.listClients();
 		clients.forEach(System.out::println);
 	}
 	

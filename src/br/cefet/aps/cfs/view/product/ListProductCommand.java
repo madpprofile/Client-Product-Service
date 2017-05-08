@@ -13,8 +13,9 @@ public class ListProductCommand implements Command{
 		if(parameters.length != 1){
 			System.out.println("Command listProducts has no parameters");
 		}
-		List<Product> clients = ControlFacade.listProducts();
-		clients.forEach(System.out::println);
+		ControlFacade cf = ControlFacade.getInstance();
+		List<Product> products = cf.listProducts();
+		products.forEach(System.out::println);
 	}
 
 }
