@@ -1,10 +1,10 @@
 package br.cefet.aps.cfs.model;
 
-public class Client {
+public abstract class Client {
 	private Long id;
 	private String name;
 	
-	public Client(Long id, String name){
+	protected Client(Long id, String name){
 		this.id = id;
 		this.name = name;
 	}
@@ -26,5 +26,7 @@ public class Client {
 	public String toString() {
 		return this.getId() + " " + this.getName();
 	}
+	
+	public abstract float getDiscount();
 
 }
